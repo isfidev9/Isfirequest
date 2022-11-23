@@ -28,9 +28,9 @@ $isfi->isfireq->post("user/create", $data)->json(); // response json
 
 
 // example get request
-$isfi->isfireq->get("user/637e8a8738790365ef08cc4e")->body(); // response default
+echo $isfi->isfireq->get("user/637e8a8738790365ef08cc4e")->body(); // response default
 $isfi->isfireq->get("user/637e8a8738790365ef08cc4e")->json(); // response json
-$isfi->isfireq->get("user/637e8a8738790365ef08cc4e")->object(); // response object
+var_dump($isfi->isfireq->get("user/637e8a8738790365ef08cc4e")->object()); // response object
 
 
 // example add new header
