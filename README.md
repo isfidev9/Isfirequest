@@ -24,11 +24,13 @@ $data = [
 	"lastName" => "Bond",
 	"email" => "jamessbond@gmail.com"
 ];
-$isfi->isfireq->post("user/create", $data)->json();
+$isfi->isfireq->post("user/create", $data)->json(); // response json
 
 
-// example post request
-$isfi->isfireq->get("user/637e8a8738790365ef08cc4e")->json();
+// example get request
+$isfi->isfireq->get("user/637e8a8738790365ef08cc4e")->body(); // response default
+$isfi->isfireq->get("user/637e8a8738790365ef08cc4e")->json(); // response json
+$isfi->isfireq->get("user/637e8a8738790365ef08cc4e")->object(); // response object
 
 
 // example add new header
